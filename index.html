@@ -269,6 +269,67 @@ footer{
 .footer-col a:hover{
     color:orange;
 }
+.about-modern{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    text-align:left;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.about-content{
+    flex:1;
+}
+
+.about-content h2{
+    color:orange;
+    margin-bottom:15px;
+}
+
+.about-content p{
+    margin-bottom:15px;
+    line-height:1.7;
+}
+
+/* Mission & Vision Cards */
+.about-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.about-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.about-card:hover{
+    transform:translateY(-8px);
+}
+
+.about-card h3{
+    color:orange;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .about-modern{
+        flex-direction:column;
+    }
+}
 
 .footer-bottom{
     text-align:center;
@@ -393,29 +454,48 @@ nav ul{
 
 </div>
 </section>
-<!-- ABOUT -->
 <section id="about">
-<div class="about-container">
-<div>
-<h2>About Us</h2>
-<p>
-Virunga Digital Solutions is a Rwanda-based ICT and technology services company that provides innovative digital transformation, custom software development, and professional IT support services to businesses, government institutions, and organizations. The company focuses on helping clients modernize their operations through efficient, secure, and scalable digital systems.
-</p>
 
-<h3 style="color:orange;margin-top:20px;">Our Mission</h3>
-<p>
-To empower businesses, government institutions, and organizations through innovative, secure, and scalable digital solutions that enhance productivity and accelerate digital transformation.
-</p>
+<div class="about-modern">
 
-<h3 style="color:orange;margin-top:20px;">Our Vision</h3>
-<p>
-To become a leading ICT and digital transformation company in Rwanda and beyond, recognized for innovation, excellence, and delivering impactful technology solutions for a connected digital society.
-</p>
+    <!-- LEFT IMAGE -->
+    <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="about-content">
+        <h2>About Us</h2>
+
+        <p>
+        Virunga Digital Solutions is a Rwanda-based ICT and technology services company that provides innovative digital transformation, custom software development, and professional IT support services to businesses, government institutions, and organizations. The company focuses on helping clients modernize their operations through efficient, secure, and scalable digital systems.
+        </p>
+
+        <p>
+        Through its solutions, Virunga Digital Solutions aims to improve productivity, enhance service delivery, and contribute to Rwanda’s vision of building a strong, technology-driven digital economy.
+        </p>
+    </div>
 </div>
-<div>
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+
+<!-- MISSION & VISION (BOTTOM CARDS) -->
+<div class="about-cards">
+
+    <div class="about-card">
+        <h3>Our Mission</h3>
+        <p>
+        To empower businesses, government institutions, and organizations through innovative, secure, and scalable digital solutions.
+        </p>
+    </div>
+
+    <div class="about-card">
+        <h3>Our Vision</h3>
+        <p>
+        To become a leading ICT and digital transformation company in Rwanda and beyond, recognized for excellence and innovation.
+        </p>
+    </div>
+
 </div>
-</div>
+
 </section>
 <!-- TEAM -->
 <section class="team">
