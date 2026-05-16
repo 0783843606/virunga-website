@@ -427,6 +427,41 @@ footer{
     white-space: nowrap;
     padding: 10px 0;
 }
+.hero {
+    background: linear-gradient(120deg,#0a3d62,#2c7bc4);
+    color: white;
+    padding: 140px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slider {
+    position: relative;
+    height: 200px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+}
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -528,8 +563,26 @@ nav ul{
 </div>
 <!-- HERO -->
 <section class="hero" id="home">
-<h1>Empowering Digital Transformation</h1>
-<p>Cloud Infrastructure, Software Development, Cybersecurity & Modern IT Solutions</p>
+
+    <div class="hero-slider">
+
+        <div class="slide active">
+            <h1>Empowering Digital Transformation</h1>
+            <p>Cloud Infrastructure, Software Development, Cybersecurity & Modern IT Solutions</p>
+        </div>
+
+        <div class="slide">
+            <h1>Building Secure Cloud Systems</h1>
+            <p>We design scalable, secure, and modern cloud infrastructure for enterprises and government.</p>
+        </div>
+
+        <div class="slide">
+            <h1>Innovating Through Technology</h1>
+            <p>AI, Software Engineering, and Digital Solutions for a smarter future in Rwanda and beyond.</p>
+        </div>
+
+    </div>
+
 </section>
 
 <!-- SERVICES -->
@@ -818,6 +871,22 @@ modal.style.display="none";
 }
 }
 </script>
+<script>
+let slides = document.querySelectorAll(".slide");
+let current = 0;
 
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+}
+
+function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+}
+
+// auto change every 4 seconds
+setInterval(nextSlide, 4000);
+</script>
 </body>
 </html>
