@@ -12,7 +12,7 @@ body{
     background:#f4f7fb;
 }
 
-/* HEADER */
+/* HEADER (UNCHANGED) */
 header{
     background:#0a3d62;
     padding:15px;
@@ -29,14 +29,29 @@ nav ul{
 nav a{color:white;text-decoration:none;}
 nav a:hover{color:orange}
 
-/* HERO */
+/* ✅ HERO (MATCH IMAGE) */
 .hero{
-    background:#0a3d62;
+    background:linear-gradient(120deg,#0a3d62,#2c7bc4);
     color:white;
     text-align:center;
-    padding:80px;
+    padding:120px 20px;
+}
+.hero h1{
+    font-size:40px;
+}
+.hero p{
+    font-size:18px;
+}
+.hero button{
+    background:#ddd;
+    color:#0a3d62;
+}
+.hero button:hover{
+    background:orange;
+    color:white;
 }
 
+/* BUTTON */
 button{
     padding:10px 15px;
     border:none;
@@ -48,6 +63,14 @@ button:hover{background:orange}
 
 /* SECTIONS */
 section{padding:60px;text-align:center}
+
+/* ✅ TITLES ORANGE */
+#services h2,
+.team h2,
+.partners h2,
+.contact h2{
+    color:orange;
+}
 
 /* GRID */
 .grid{
@@ -74,11 +97,6 @@ section{padding:60px;text-align:center}
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
-}
-
-.team-card{
-    background:white;
-    padding:20px;
 }
 .team-card img{
     width:120px;
@@ -123,7 +141,7 @@ section{padding:60px;text-align:center}
     padding:10px;
 }
 
-/* FOOTER */
+/* ✅ FOOTER (STYLE ONLY — STRUCTURE SAME) */
 footer{
     background:#0a3d62;
     color:white;
@@ -132,15 +150,24 @@ footer{
 .footer-container{
     display:grid;
     grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+.footer-col h3{
+    margin-bottom:10px;
 }
 .footer-col a{
     color:white;
+    text-decoration:none;
 }
 .footer-col a:hover{
     color:orange;
 }
+.footer-bottom{
+    text-align:center;
+    margin-top:20px;
+}
 
-/* POPUP */
+/* POPUP (UNCHANGED) */
 #modal{
     display:none;
     position:fixed;
@@ -175,6 +202,8 @@ footer{
 
 <section class="hero" id="home">
 <h1>Empowering Digital Transformation</h1>
+<p>Cloud, Software & IT Solutions</p>
+<button>Get Started</button>
 </section>
 
 <!-- SERVICES -->
@@ -309,6 +338,7 @@ footer{
 
 <div class="footer-col">
 <h3>Virunga Digital</h3>
+<p>Innovative digital solutions company.</p>
 </div>
 
 <div class="footer-col">
@@ -329,6 +359,8 @@ footer{
 
 <div class="footer-col">
 <h3>Contact</h3>
+<p>Email: info@virunga.com</p>
+<p>Phone: +250 7XX XXX XXX</p>
 <p>Kigali, Rwanda</p>
 </div>
 
@@ -339,7 +371,7 @@ footer{
 </div>
 </footer>
 
-<!-- ✅ POPUP -->
+<!-- POPUP -->
 <div id="modal">
 <div class="modal-box">
 <span onclick="closeModal()" style="cursor:pointer">X</span>
