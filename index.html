@@ -359,7 +359,21 @@ footer{
     text-align:left;
     position:relative;
 }
+.btn-primary {
+    background:#ff8c00;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
 
+.btn-primary:hover {
+    background:#e67e00;
+    transform:scale(1.05);
+}
 .close-btn{
     position:absolute;
     top:15px;
@@ -367,7 +381,53 @@ footer{
     font-size:24px;
     cursor:pointer;
 }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+.marquee {
+    width: 100%;
+    background: #ff8c00;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    position: relative;
+}
 
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 15s linear infinite;
+    font-weight: bold;
+    font-family: Poppins, sans-serif;
+}
+
+/* ANIMATION */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+/* 🔥 HOVER EFFECT (THIS IS WHAT YOU WERE MISSING) */
+.nav-links a:hover {
+    color: orange;
+}
 /* RESPONSIVE */
 @media(max-width:768px){
 
@@ -399,34 +459,67 @@ nav ul{
 
 <body>
 
-<header style="display:flex;justify-content:space-between;align-items:center;padding:15px 40px;background:#0a3d62;color:white;">
+<header style="
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#0a3d62;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+">
 
-    <!-- LEFT SIDE (LOGO + NAME) -->
-    <div style="display:flex;align-items:center;gap:10px;">
+    <!-- LEFT: LOGO + NAME -->
+    <div style="display:flex;align-items:center;gap:12px;">
 
-        <!-- LOGO IMAGE -->
-        <img src="logo.png" alt="Virunga Logo"
-             style="width:45px;height:45px;border-radius:8px;object-fit:cover;">
+        <!-- LOGO -->
+        <div style="
+            width:45px;
+            height:45px;
+            border-radius:50%;
+            background:linear-gradient(135deg,#ff8c00,#0a3d62);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-weight:bold;
+            color:white;
+            box-shadow:0 0 12px rgba(255,140,0,0.7);
+        ">
+            V
+        </div>
 
-        <!-- BRAND NAME -->
-        <div style="font-size:20px;font-weight:bold;color:orange;">
-            Virunga Digital Solutions
+        <!-- BRAND TEXT -->
+        <div style="font-size:18px;font-weight:bold;">
+            Virunga <span style="color:orange;">Digital Solutions</span>
         </div>
 
     </div>
 
-    <!-- RIGHT SIDE MENU -->
+    <!-- NAVIGATION -->
     <nav>
-        <ul style="list-style:none;display:flex;gap:20px;margin:0;padding:0;">
-            <li><a href="#home" style="color:white;text-decoration:none;">Home</a></li>
-            <li><a href="#about" style="color:white;text-decoration:none;">About</a></li>
-            <li><a href="#services" style="color:white;text-decoration:none;">Services</a></li>
-            <li><a href="#contact" style="color:white;text-decoration:none;">Contact</a></li>
-        </ul>
-    </nav>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#services">Training</a></li>
+        <li><a href="#contact">Careers</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</nav>
 
 </header>
-
+<!-- MOVING TEXT SECTION -->
+<div class="marquee">
+    <div class="marquee-content">
+        🚀 Welcome to Virunga Digital Solutions • 
+        💻 Web Development • Mobile Apps • IT Support • Cybersecurity Training • 
+        🌍 Empowering Digital Transformation in Rwanda • 
+        🔥 Innovation • Skills • Technology • Growth •
+    </div>
+</div>
 <!-- HERO -->
 <section class="hero" id="home">
 <h1>Empowering Digital Transformation</h1>
