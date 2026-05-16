@@ -468,7 +468,75 @@ footer{
     transition: 0.3s;
     font-weight: 500;
 }
+.hero {
+    position: relative;
+    height: 500px;   /* 👈 reduced from full screen */
+    overflow: hidden;
+    color: white;
+}
 
+.hero-slider {
+    position: relative;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: all 0.8s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.5);
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.hero-buttons {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-buttons button {
+    background: orange;
+    border: none;
+    padding: 10px 18px;
+    margin: 5px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-buttons button:hover {
+    background: #e67e00;
+    transform: scale(1.05);
+}
 /* 🔥 HOVER EFFECT (THIS IS WHAT YOU WERE MISSING) */
 .nav-links a:hover {
     color: orange;
@@ -566,19 +634,28 @@ nav ul{
 
     <div class="hero-slider">
 
-        <div class="slide active">
-            <h1>Empowering Digital Transformation</h1>
-            <p>Cloud Infrastructure, Software Development, Cybersecurity & Modern IT Solutions</p>
+        <!-- SLIDE 1 -->
+        <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b');">
+            <div class="overlay">
+                <h1>Empowering Digital Transformation</h1>
+                <p>Cloud Infrastructure, Software Development, Cybersecurity & Modern IT Solutions</p>
+            </div>
         </div>
 
-        <div class="slide">
-            <h1>Building Secure Cloud Systems</h1>
-            <p>We design scalable, secure, and modern cloud infrastructure for enterprises and government.</p>
+        <!-- SLIDE 2 -->
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');">
+            <div class="overlay">
+                <h1>Building Secure Cloud Systems</h1>
+                <p>We design scalable, secure, and modern cloud infrastructure for enterprises.</p>
+            </div>
         </div>
 
-        <div class="slide">
-            <h1>Innovating Through Technology</h1>
-            <p>AI, Software Engineering, and Digital Solutions for a smarter future in Rwanda and beyond.</p>
+        <!-- SLIDE 3 -->
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1517433456452-f9633a875f6f');">
+            <div class="overlay">
+                <h1>Innovating Through Technology</h1>
+                <p>AI, Software Engineering, and Digital Innovation for a smarter future.</p>
+            </div>
         </div>
 
     </div>
@@ -888,5 +965,25 @@ function nextSlide() {
 // auto change every 4 seconds
 setInterval(nextSlide, 4000);
 </script>
+<script>
+let slides = document.querySelectorAll(".slide");
+let current = 0;
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+}
+
+function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+}
+
+function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+}
+</script>
+
 </body>
 </html>
