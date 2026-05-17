@@ -41,7 +41,6 @@ nav{
     width:auto;
 }
 
-/* BRAND NAME */
 .brand-name{
     color:white;
     font-size:20px;
@@ -52,7 +51,7 @@ nav{
     color:orange;
 }
 
-/* NAVIGATION */
+/* NAV LINKS */
 .nav-links{
     list-style:none;
     display:flex;
@@ -74,7 +73,7 @@ nav{
 
 /* PAGE TITLE */
 .page-title{
-    background:linear-gradient(120deg,#0a3d62,#0a3d62);
+    background:#0a3d62;
     color:white;
     text-align:center;
     padding:60px 20px;
@@ -92,7 +91,7 @@ nav{
 
 /* PRICING SECTION */
 .pricing-section{
-    padding:60px 10%;
+    padding:60px 8%;
     text-align:center;
 }
 
@@ -110,21 +109,43 @@ table{
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
     border-radius:12px;
     overflow:hidden;
+    table-layout:fixed;
 }
 
+/* TABLE HEADER */
 th{
     background:#0a3d62;
     color:white;
-    padding:16px;
+    padding:18px;
     font-size:16px;
+    text-align:center;
 }
 
+/* TABLE BODY */
 td{
-    padding:15px;
+    padding:16px 20px;
     border-bottom:1px solid #ddd;
-    text-align:left;
+    vertical-align:middle;
 }
 
+/* SERVICE COLUMNS */
+td:nth-child(1),
+td:nth-child(3){
+    text-align:left;
+    width:35%;
+    font-weight:500;
+}
+
+/* PRICE COLUMNS */
+td:nth-child(2),
+td:nth-child(4){
+    text-align:center;
+    width:15%;
+    font-weight:bold;
+    color:#0a3d62;
+}
+
+/* HOVER */
 tr:hover{
     background:#f0f8ff;
 }
@@ -251,7 +272,7 @@ Virunga <span>Digital Solutions</span>
 <p>Affordable and Transparent Service Pricing</p>
 </section>
 
-<!-- PRICING SECTION -->
+<!-- PRICING -->
 <section class="pricing-section">
 
 <h2>Transparent & Affordable Pricing</h2>
@@ -259,58 +280,58 @@ Virunga <span>Digital Solutions</span>
 <table>
 
 <tr>
-    <th>Service</th>
-    <th>Price/Rwf</th>
-    <th>Service</th>
-    <th>Price/Rwf</th>
+<th>Service</th>
+<th>Price/Rwf</th>
+<th>Service</th>
+<th>Price/Rwf</th>
 </tr>
 
 <tr>
-    <td>Black and White Printing</td>
-    <td>100</td>
+<td>Black and White Printing</td>
+<td>100</td>
 
-    <td>Color Printing</td>
-    <td>200</td>
+<td>Color Printing</td>
+<td>200</td>
 </tr>
 
 <tr>
-    <td>Cybersecurity Training</td>
-    <td>$100 - $800</td>
+<td>Cybersecurity Training</td>
+<td>$100 - $800</td>
 
-    <td>IT Support Services</td>
-    <td>$50 / month</td>
+<td>IT Support Services</td>
+<td>$50 / month</td>
 </tr>
 
 <tr>
-    <td>Cloud Hosting Setup</td>
-    <td>$150 - $1000</td>
+<td>Cloud Hosting Setup</td>
+<td>$150 - $1000</td>
 
-    <td>Website Development</td>
-    <td>$200 - $2000</td>
+<td>Website Development</td>
+<td>$200 - $2000</td>
 </tr>
 
 <tr>
-    <td>Network Installation</td>
-    <td>$150 - $500</td>
+<td>Network Installation</td>
+<td>$150 - $500</td>
 
-    <td>Graphic Design Services</td>
-    <td>$50 - $300</td>
+<td>Graphic Design Services</td>
+<td>$50 - $300</td>
 </tr>
 
 <tr>
-    <td>Computer Maintenance</td>
-    <td>$20 - $100</td>
+<td>Computer Maintenance</td>
+<td>$20 - $100</td>
 
-    <td>Digital Marketing</td>
-    <td>$100 - $500</td>
+<td>Digital Marketing</td>
+<td>$100 - $500</td>
 </tr>
 
 <tr>
-    <td>Business Registration Support</td>
-    <td>$30 - $150</td>
+<td>Business Registration Support</td>
+<td>$30 - $150</td>
 
-    <td>Online Government Services</td>
-    <td>$10 - $100</td>
+<td>Online Government Services</td>
+<td>$10 - $100</td>
 </tr>
 
 </table>
