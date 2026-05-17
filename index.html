@@ -574,7 +574,130 @@ footer{
     border-radius: 12px;
     max-width: 800px;
 }
+/* SPACE BETWEEN SECTIONS */
+.section-space{
+    height:80px;
+    background:white;
+}
 
+/* WHY CHOOSE US */
+.why-choose-us{
+    padding:80px 10%;
+    background:#f4f7fb;
+    text-align:center;
+}
+
+.why-choose-us h2{
+    color:orange;
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.section-desc{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:50px;
+    color:#555;
+    line-height:1.8;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.why-card{
+    background:white;
+    padding:35px 25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+}
+
+.why-card .icon{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+/* PARTNERS */
+.partners{
+    padding:80px 10%;
+    background:#0a3d62;
+    text-align:center;
+    color:white;
+}
+
+.partners h2{
+    color:orange;
+    margin-bottom:40px;
+}
+
+.partners-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.partner-box{
+    background:white;
+    color:#0a3d62;
+    padding:40px 20px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+/* CONTACT */
+.contact{
+    padding:80px 10%;
+    background:#f9f9f9;
+    text-align:center;
+}
+
+.contact h2{
+    color:orange;
+    margin-bottom:30px;
+}
+
+.contact form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact input,
+.contact textarea{
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.contact button{
+    display:inline-block;
+    padding:12px 30px;
+    background:#0a3d62;
+    color:white;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    width:auto;
+    align-self:center;
+}
+
+.contact button:hover{
+    background:#ff8800;
+    transform:translateY(-3px);
+}
 .hero h1 {
     font-size: 45px;
     margin-bottom: 15px;
@@ -933,24 +1056,12 @@ We measure our success through real results delivered to clients, partners, and 
 </section>
 
 <!-- PARTNERS -->
-<section class="partners">
-<h2>Our Partners</h2>
-<p style="max-width:800px;margin:auto;line-height:1.7;">
-We collaborate with leading global technology companies and organizations to deliver innovative, secure, and scalable digital solutions. Our partnerships help us stay at the forefront of digital transformation and service excellence.
-</p>
-<div class="partners-grid">
-<div class="partner-card"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"></div>
-<div class="partner-card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"></div>
-<div class="partner-card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"></div>
-<div class="partner-card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"></div>
-</div>
-</section>
 <!-- WHY CHOOSE US -->
 <section class="why-choose-us" id="why-us">
 
     <h2>Why Choose Us</h2>
     <p class="section-desc">
-        We deliver reliable digital solutions, professional IT services, 
+        We deliver reliable digital solutions, professional IT services,
         and innovative technologies that help businesses grow and succeed.
     </p>
 
@@ -959,53 +1070,60 @@ We collaborate with leading global technology companies and organizations to del
         <div class="why-card">
             <div class="icon">💡</div>
             <h3>Innovative Solutions</h3>
-            <p>
-                We provide modern and creative technology solutions tailored 
-                to meet your business needs.
-            </p>
+            <p>Modern and creative technology solutions tailored for your business.</p>
         </div>
 
         <div class="why-card">
             <div class="icon">🔒</div>
             <h3>Secure Systems</h3>
-            <p>
-                Security is our priority. We build safe, reliable, 
-                and protected digital environments.
-            </p>
+            <p>We build secure, reliable, and protected digital environments.</p>
         </div>
 
         <div class="why-card">
             <div class="icon">⚡</div>
             <h3>Fast Support</h3>
-            <p>
-                Our technical team provides quick assistance and dependable 
-                customer support services.
-            </p>
+            <p>Quick technical assistance and dependable customer support.</p>
         </div>
 
         <div class="why-card">
             <div class="icon">🌍</div>
             <h3>Digital Transformation</h3>
-            <p>
-                We help organizations embrace digital transformation 
-                through modern technologies and cloud solutions.
-            </p>
+            <p>Helping organizations adopt modern technologies and cloud solutions.</p>
         </div>
 
     </div>
 
 </section>
-<!-- CONTACT -->
-<section id="contact" class="contact">
-<h2>Contact Us</h2>
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
+
+<!-- SPACE BETWEEN SECTIONS -->
+<div class="section-space"></div>
+
+<!-- PARTNERS -->
+<section class="partners" id="partners">
+    <h2>Our Partners</h2>
+
+    <div class="partners-container">
+        <div class="partner-box">Partner 1</div>
+        <div class="partner-box">Partner 2</div>
+        <div class="partner-box">Partner 3</div>
+        <div class="partner-box">Partner 4</div>
+    </div>
 </section>
 
+<!-- SPACE BETWEEN SECTIONS -->
+<div class="section-space"></div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
 <!-- FOOTER -->
 <footer>
 <div class="footer-container">
