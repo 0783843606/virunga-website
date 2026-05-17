@@ -2,21 +2,87 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pricing - Virunga Digital Solutions</title>
 
 <style>
+
 body{
-    font-family:Arial;
+    font-family:Arial, sans-serif;
     margin:0;
     background:#f4f7fb;
+    color:#333;
 }
 
 /* HEADER */
 header{
     background:#0a3d62;
-    padding:20px;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* LOGO */
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-area img{
+    height:55px;
+    width:auto;
+}
+
+/* BRAND NAME */
+.brand-name{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.brand-name span{
+    color:orange;
+}
+
+/* NAV LINKS */
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    margin:0;
+    padding:0;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:orange;
+}
+
+/* PAGE TITLE */
+.page-title{
+    background:linear-gradient(120deg,#0a3d62,#0a3d62);
     color:white;
     text-align:center;
+    padding:60px 20px;
+}
+
+.page-title h1{
+    margin:0;
+    font-size:40px;
 }
 
 /* PRICING SECTION */
@@ -25,12 +91,12 @@ header{
     text-align:center;
 }
 
-h2{
+.pricing-section h2{
     color:orange;
     margin-bottom:30px;
 }
 
-/* TABLE STYLE */
+/* TABLE */
 table{
     width:100%;
     border-collapse:collapse;
@@ -65,18 +131,22 @@ tr:hover{
     font-weight:bold;
 }
 
-/* BACK BUTTON */
+/* BUTTON */
 .back-btn{
     display:inline-block;
     margin-top:30px;
-    padding:10px 20px;
+    padding:12px 22px;
     background:orange;
     color:white;
     text-decoration:none;
-    border-radius:20px;
+    border-radius:25px;
+    transition:0.3s;
+    font-weight:bold;
 }
+
 .back-btn:hover{
     background:#ff8800;
+    transform:translateY(-3px);
 }
 
 /* FOOTER */
@@ -101,7 +171,7 @@ footer{
     color:white;
     text-decoration:none;
     display:block;
-    margin:5px 0;
+    margin:6px 0;
 }
 
 .footer-col a:hover{
@@ -114,119 +184,161 @@ footer{
     border-top:1px solid rgba(255,255,255,0.2);
     padding-top:15px;
 }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.page-title h1{
+    font-size:30px;
+}
+
+table{
+    font-size:14px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <h1>Our Pricing</h1>
+
+<nav>
+
+<!-- LOGO -->
+<div class="logo-area">
+
+<img src="../images/logo.png" alt="Virunga Logo">
+
+<div class="brand-name">
+Virunga <span>Digital Solutions</span>
+</div>
+
+</div>
+
+<!-- MENU -->
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#about">About Us</a></li>
+<li><a href="../index.html#services">Services</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="../index.html#contact">Contact</a></li>
+</ul>
+
+</nav>
+
 </header>
 
+<!-- PAGE TITLE -->
+<section class="page-title">
+<h1>Our Pricing</h1>
+<p>Affordable and Transparent Service Pricing</p>
+</section>
+
+<!-- PRICING -->
 <section class="pricing-section">
 
 <h2>Transparent & Affordable Pricing</h2>
 
 <table>
-    <tr>
-        <th class="col-service">Service</th>
-        <th class="col-price">Price/Rwf</th>
-    </tr>
 
-    <tr>
-        <td class="col-service">Black and white Printing</td>
-        <td class="col-price">100</td>
-    </tr>
-
-    <tr>
-        <td class="col-service">Color Printing</td>
-        <td class="col-price">200</td>
-    </tr>
-
-    <tr>
-        <td class="col-service">Cybersecurity Training</td>
-        <td class="col-price">$100 - $800</td>
-    </tr>
 <tr>
-        <td class="col-service">Color Printing</td>
-        <td class="col-price">200</td>
-    </tr>
+<th class="col-service">Service</th>
+<th class="col-price">Price/Rwf</th>
+</tr>
 
-    <tr>
-        <td class="col-service">Cybersecurity Training</td>
-        <td class="col-price">$100 - $800</td>
-    </tr>
-    <tr>
-        <td class="col-service">Color Printing</td>
-        <td class="col-price">200</td>
-    </tr>
+<tr>
+<td class="col-service">Black and White Printing</td>
+<td class="col-price">100</td>
+</tr>
 
-    <tr>
-        <td class="col-service">Cybersecurity Training</td>
-        <td class="col-price">$100 - $800</td>
-    </tr>
-    <tr>
-        <td class="col-service">Color Printing</td>
-        <td class="col-price">200</td>
-    </tr>
+<tr>
+<td class="col-service">Color Printing</td>
+<td class="col-price">200</td>
+</tr>
 
-    <tr>
-        <td class="col-service">Cybersecurity Training</td>
-        <td class="col-price">$100 - $800</td>
-    </tr>
-    <tr>
-        <td class="col-service">Color Printing</td>
-        <td class="col-price">200</td>
-    </tr>
+<tr>
+<td class="col-service">Cybersecurity Training</td>
+<td class="col-price">$100 - $800</td>
+</tr>
 
-    <tr>
-        <td class="col-service">Cybersecurity Training</td>
-        <td class="col-price">$100 - $800</td>
-    </tr>
-    <tr>
-        <td class="col-service">Color Printing</td>
-        <td class="col-price">200</td>
-    </tr>
+<tr>
+<td class="col-service">IT Support Services</td>
+<td class="col-price">$50 / month</td>
+</tr>
 
-    <tr>
-        <td class="col-service">Cybersecurity Training</td>
-        <td class="col-price">$100 - $800</td>
-    </tr>
-    <tr>
-        <td class="col-service">Color Printing</td>
-        <td class="col-price">200</td>
-    </tr>
+<tr>
+<td class="col-service">Cloud Hosting Setup</td>
+<td class="col-price">$150 - $1000</td>
+</tr>
+<tr>
+<td class="col-service">Black and White Printing</td>
+<td class="col-price">100</td>
+</tr>
 
-    <tr>
-        <td class="col-service">Cybersecurity Training</td>
-        <td class="col-price">$100 - $800</td>
-    </tr>
-    <tr>
-        <td class="col-service">Color Printing</td>
-        <td class="col-price">200</td>
-    </tr>
+<tr>
+<td class="col-service">Color Printing</td>
+<td class="col-price">200</td>
+</tr>
 
-    <tr>
-        <td class="col-service">Cybersecurity Training</td>
-        <td class="col-price">$100 - $800</td>
-    </tr>
-    <tr>
-        <td class="col-service">IT Support Services</td>
-        <td class="col-price">$50 / month</td>
-    </tr>
+<tr>
+<td class="col-service">Cybersecurity Training</td>
+<td class="col-price">$100 - $800</td>
+</tr>
 
-    <tr>
-        <td class="col-service">Cloud Hosting Setup</td>
-        <td class="col-price">$150 - $1000</td>
-    </tr>
+<tr>
+<td class="col-service">IT Support Services</td>
+<td class="col-price">$50 / month</td>
+</tr>
 
+<tr>
+<td class="col-service">Cloud Hosting Setup</td>
+<td class="col-price">$150 - $1000</td>
+</tr>
+<tr>
+<td class="col-service">Black and White Printing</td>
+<td class="col-price">100</td>
+</tr>
+
+<tr>
+<td class="col-service">Color Printing</td>
+<td class="col-price">200</td>
+</tr>
+
+<tr>
+<td class="col-service">Cybersecurity Training</td>
+<td class="col-price">$100 - $800</td>
+</tr>
+
+<tr>
+<td class="col-service">IT Support Services</td>
+<td class="col-price">$50 / month</td>
+</tr>
+
+<tr>
+<td class="col-service">Cloud Hosting Setup</td>
+<td class="col-price">$150 - $1000</td>
+</tr>
 </table>
 
 <a class="back-btn" href="../index.html">← Back to Home</a>
 
 </section>
 
-<!-- FOOTER (FIXED LOCATION) -->
+<!-- FOOTER -->
 <footer id="footer">
 
 <div class="footer-container">
