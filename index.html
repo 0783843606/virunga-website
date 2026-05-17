@@ -512,7 +512,60 @@ footer{
 
     padding: 20px;
 }
+/* WHY CHOOSE US */
+.why-choose-us{
+    padding:80px 10%;
+    background:#f4f7fb;
+    text-align:center;
+}
 
+.why-choose-us h2{
+    font-size:36px;
+    color:#0a3d62;
+    margin-bottom:15px;
+}
+
+.section-desc{
+    max-width:700px;
+    margin:auto;
+    color:#555;
+    margin-bottom:50px;
+    line-height:1.8;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.why-card{
+    background:white;
+    padding:35px 25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.why-card .icon{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.why-card h3{
+    color:#0a3d62;
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#666;
+    line-height:1.7;
+}
 .overlay {
     background: rgba(0,0,0,0.5);
     padding: 40px;
@@ -890,6 +943,56 @@ We collaborate with leading global technology companies and organizations to del
 <div class="partner-card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"></div>
 <div class="partner-card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"></div>
 </div>
+</section>
+<!-- WHY CHOOSE US -->
+<section class="why-choose-us" id="why-us">
+
+    <h2>Why Choose Us</h2>
+    <p class="section-desc">
+        We deliver reliable digital solutions, professional IT services, 
+        and innovative technologies that help businesses grow and succeed.
+    </p>
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <div class="icon">💡</div>
+            <h3>Innovative Solutions</h3>
+            <p>
+                We provide modern and creative technology solutions tailored 
+                to meet your business needs.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">🔒</div>
+            <h3>Secure Systems</h3>
+            <p>
+                Security is our priority. We build safe, reliable, 
+                and protected digital environments.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">⚡</div>
+            <h3>Fast Support</h3>
+            <p>
+                Our technical team provides quick assistance and dependable 
+                customer support services.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">🌍</div>
+            <h3>Digital Transformation</h3>
+            <p>
+                We help organizations embrace digital transformation 
+                through modern technologies and cloud solutions.
+            </p>
+        </div>
+
+    </div>
+
 </section>
 <!-- CONTACT -->
 <section id="contact" class="contact">
