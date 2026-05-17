@@ -888,6 +888,79 @@ nav ul{
     border-radius:12px;
     box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
+#services{
+    padding:80px 10%;
+    background:#f4f7fb;
+    text-align:center;
+}
+
+#services h2{
+    color:orange;
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3{
+    color:#0a3d62;
+    margin-top:15px;
+}
+
+.card p{
+    color:#555;
+    font-size:14px;
+}
+
+/* BUTTON STYLE */
+.btn{
+    margin-top:15px;
+    padding:10px 20px;
+    background:orange;
+    color:white;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff8800;
+    transform:translateY(-3px);
+}
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:orange;
+    color:white;
+    text-decoration:none;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff8800;
+    transform:translateY(-3px);
+}
 }
 
 </style>
@@ -992,32 +1065,52 @@ nav ul{
 
 <div class="grid">
 
+<!-- WEB DEVELOPMENT -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
 <h3>Web Development</h3>
 <p>Modern responsive websites and enterprise web applications.</p>
-<button onclick="openModal('Web Development','We build scalable, responsive, and modern websites and enterprise applications using the latest technologies.')">Read More</button>
+
+<button class="btn"
+onclick="location.href='services/web-development.html'">
+Read More
+</button>
 </div>
 
+<!-- E-GOVERNMENT -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
 <h3>E-Government & Online Services</h3>
 <p>Secure cloud infrastructure and enterprise hosting solutions.</p>
-<button onclick="openModal('E-Government & Online Services','We provide secure cloud infrastructure and enterprise hosting solutions for government institutions and online services.')">Read More</button>
+
+<button class="btn"
+onclick="location.href='services/e-government.html'">
+Read More
+</button>
 </div>
 
+<!-- TRAINING -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f">
 <h3>Training & Capacity Building Services</h3>
 <p>Comprehensive training and capacity-building programs.</p>
-<button onclick="openModal('Training & Capacity Building','We offer comprehensive training and capacity-building programs in software development, digital marketing, and other emerging technologies.')">Read More</button>
+
+<button class="btn"
+onclick="location.href='services/training.html'">
+Read More
+</button>
 </div>
 
+<!-- STATIONERY -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
-<h3>Cyber Security</h3>
-<p>Advanced cybersecurity and network protection solutions.</p>
-<button onclick="openModal('Cyber Security','We protect systems, servers, networks, and applications using modern cybersecurity technologies and best practices.')">Read More</button>
+<h3>Stationery Services</h3>
+<p>High-quality stationery products for businesses and individuals.</p>
+
+<button class="btn"
+onclick="location.href='services/stationery.html'">
+Read More
+</button>
 </div>
 
 </div>
