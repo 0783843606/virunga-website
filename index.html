@@ -1499,7 +1499,7 @@ We measure our success through real results delivered to clients, partners, and 
 
 
 <div class="footer-bottom">
-© 2026 Virunga Digital Solutions — All Rights Reserved
+     © <span id="year"></span> Virunga Digital Solutions Ltd — All Rights Reserved
 </div>
 </footer>
 
@@ -1569,6 +1569,10 @@ function prevServices(){
         track.style.transform = "translateX(-" + (position * 25) + "%)";
     }
 }
+</script>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
