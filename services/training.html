@@ -4,14 +4,21 @@
 <title>Training Services</title>
 
 <style>
-
-/* GENERAL */
+/* FIXED HEADER */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
+/* PUSH CONTENT DOWN */
 body{
     margin:0;
     font-family:Arial;
     background:#f4f7fb;
+    padding-top:100px; /* IMPORTANT */
 }
-
 /* PAGE HEADER */
 .header{
     background:#0a3d62;
@@ -27,7 +34,7 @@ body{
     background:white;
     padding:40px;
     border-radius:12px;
-    margin-top:-30px;
+   margin-top:20px;
     position:relative;
     z-index:1;
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
