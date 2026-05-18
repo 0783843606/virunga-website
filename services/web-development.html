@@ -147,6 +147,17 @@ footer{
 }
 
 }
+.footer-col p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff; /* text color */
+}
+
+.footer-col i {
+    color: orange; /* orange like your image */
+    font-size: 18px;
+}
 
 </style>
 </head>
@@ -154,6 +165,7 @@ footer{
 <body>
 <!-- HEADER -->
 <header style="display:flex;justify-content:space-between;align-items:center;padding:25px 40px;background:#0a3d62;color:white;">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <div style="display:flex;align-items:center;gap:12px;">
 <img src="../images/logo.png" alt="Logo" style="height:65px;">
@@ -237,14 +249,14 @@ footer{
     </div>
 
     <div class="footer-col">
-        <h3>Contact</h3>
+    <h3>Contact</h3>
+    <p><i class="fa-solid fa-location-dot"></i> Kigali, Rwanda</p>
 
-        <p>Kigali, Rwanda</p>
-        <p>Email: info@virungadigital.com</p>
-        <p>Phone: +250 7XX XXX XXX</p>
-    </div>
+    <p><i class="fa-regular fa-envelope"></i> info@virungadigital.com</p>
 
+    <p><i class="fa-solid fa-phone"></i> +250 7XX XXX XXX</p>
 </div>
+  </div>
 
 <div class="footer-bottom">
     © 2026 Virunga Digital Solutions — All Rights Reserved
