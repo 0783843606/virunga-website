@@ -108,21 +108,6 @@ button:hover{
     color:orange;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:40px;
-}
-
-.card{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
 .card:hover{
     transform:translateY(-10px);
 }
@@ -323,6 +308,53 @@ footer{
 .about-card h3{
     color:orange;
 }
+/* SERVICES SLIDER FIX */
+.services-slider{
+    position:relative;
+    width:100%;
+}
+
+/* container hides extra cards */
+.services-container{
+    overflow:hidden;
+    width:100%;
+}
+
+/* track slides */
+.services-track{
+    display:flex;
+    gap:20px;
+    transition:transform 0.5s ease;
+}
+
+/* show exactly 4 cards */
+#services .card{
+    min-width:25%;
+    box-sizing:border-box;
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+/* navigation buttons */
+.nav-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:orange;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    cursor:pointer;
+    font-size:20px;
+    border-radius:50%;
+    z-index:10;
+}
+
+.prev{ left:-10px; }
+.next{ right:-10px; }
 
 /* RESPONSIVE */
 @media(max-width:768px){
@@ -810,6 +842,48 @@ footer{
 .nav-links a:hover {
     color: orange;
 }
+.services-slider{
+    position: relative;
+}
+
+.services-container{
+    overflow: hidden;
+    width: 100%;
+}
+
+/* horizontal layout */
+.services-track{
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+/* show exactly 4 */
+#services .card{
+    flex: 0 0 25%;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* buttons */
+.nav-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: orange;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev{ left: -10px; }
+.next{ right: -10px; }
+
 /* RESPONSIVE */
 @media(max-width:768px){
 
@@ -900,19 +974,6 @@ nav ul{
     margin-bottom:40px;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
 .card img{
     width:100%;
     height:180px;
@@ -960,6 +1021,11 @@ nav ul{
 .btn:hover{
     background:#ff8800;
     transform:translateY(-3px);
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
 }
 
 }
@@ -1063,62 +1129,73 @@ nav ul{
 
 </section>
 
-<!-- SERVICES -->
 <section id="services">
 <h2>Wide Range Of Our Services</h2>
 
-<div class="grid">
+<div class="services-slider">
 
-<!-- WEB DEVELOPMENT -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-<h3>Web Development</h3>
-<p>Modern responsive websites and enterprise web applications.</p>
+    <!-- LEFT BUTTON -->
+    <button class="nav-btn prev" onclick="prevServices()">❮</button>
 
-<button class="btn"
-onclick="location.href='services/web-development.html'">
-Read More
-</button>
-</div>
+    <div class="services-container">
+        <div class="services-track" id="servicesTrack">
 
-<!-- E-GOVERNMENT -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-<h3>E-Government & Online Services</h3>
-<p>With Virunga Digital Solutions, you are able to Access Government Services Anytime, Anywhere.</p>
+            <!-- SERVICE 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+                <h3>Web Development</h3>
+                <p>Modern responsive websites and enterprise web applications.</p>
+                <button class="btn" onclick="location.href='services/web-development.html'">Read More</button>
+            </div>
 
-<button class="btn"
-onclick="location.href='services/e-government.html'">
-Read More
-</button>
-</div>
+            <!-- SERVICE 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+                <h3>E-Government & Online Services</h3>
+                <p>Access government services anytime, anywhere.</p>
+                <button class="btn" onclick="location.href='services/e-government.html'">Read More</button>
+            </div>
 
-<!-- TRAINING -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f">
-<h3>Training & Capacity Building Services</h3>
-<p>Unlock Your Potential with Our Comprehensive training and capacity-building programs.</p>
+            <!-- SERVICE 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f">
+                <h3>Training & Capacity Building</h3>
+                <p>Comprehensive training programs to build digital skills.</p>
+                <button class="btn" onclick="location.href='services/training.html'">Read More</button>
+            </div>
 
-<button class="btn"
-onclick="location.href='services/training.html'">
-Read More
-</button>
-</div>
+            <!-- SERVICE 4 -->
+            <div class="card">
+                <img src="images/about.jpeg" alt="Stationery">
+                <h3>Stationery Services</h3>
+                <p>Premium stationery solutions for businesses and individuals.</p>
+                <button class="btn" onclick="location.href='services/stationery.html'">Read More</button>
+            </div>
 
-<!-- STATIONERY -->
-<div class="card">
-<img src="images/about.jpeg" alt="Virunga Digital Solutions About Image">
-<h3>Stationery Services</h3>
-<p>Premium stationery solutions designed to meet the needs of both businesses and individuals with quality and reliability.</p>
+            <div class="card">
+                <img src="images/about.jpeg" alt="Stationery">
+                <h3>Stationery Services</h3>
+                <p>Premium stationery solutions for businesses and individuals.</p>
+                <button class="btn" onclick="location.href='services/stationery.html'">Read More</button>
+            </div>
 
-<button class="btn"
-onclick="location.href='services/stationery.html'">
-Read More
-</button>
-</div>
+           <div class="card">
+                <img src="images/about.jpeg" alt="Stationery">
+                <h3>Stationery Services</h3>
+                <p>Premium stationery solutions for businesses and individuals.</p>
+                <button class="btn" onclick="location.href='services/stationery.html'">Read More</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- RIGHT BUTTON -->
+    <button class="nav-btn next" onclick="nextServices()">❯</button>
 
 </div>
 </section>
+
+
 <section id="about">
 
 <div class="about-modern">
@@ -1453,6 +1530,28 @@ setInterval(() => {
     current = (current + 1) % slides.length;
     showSlide(current);
 }, 4000);
+</script>
+<script>
+let position = 0;
+
+function nextServices(){
+    const track = document.getElementById("servicesTrack");
+    const total = track.children.length;
+
+    if(position < total - 4){
+        position++;
+        track.style.transform = "translateX(-" + (position * 25) + "%)";
+    }
+}
+
+function prevServices(){
+    const track = document.getElementById("servicesTrack");
+
+    if(position > 0){
+        position--;
+        track.style.transform = "translateX(-" + (position * 25) + "%)";
+    }
+}
 </script>
 
 </body>
