@@ -6,7 +6,14 @@
 <title>Web Development | Virunga Digital Solutions</title>
 
 <style>
-
+/* FIXED HEADER */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
 /* GENERAL */
 *{
     margin:0;
@@ -73,7 +80,7 @@ body{
     display:inline-block;
     margin-top:20px;
     padding:12px 24px;
-    background:#0a3d62;
+    background:orange;
     color:white;
     text-decoration:none;
     border-radius:8px;
@@ -101,7 +108,7 @@ footer{
 
 .footer-col h3{
     margin-bottom:15px;
-    color:orange;
+    color:white;
 }
 
 .footer-col p{
@@ -144,7 +151,25 @@ footer{
 </head>
 
 <body>
+<!-- HEADER -->
+<header style="display:flex;justify-content:space-between;align-items:center;padding:25px 40px;background:#0a3d62;color:white;">
 
+<div style="display:flex;align-items:center;gap:12px;">
+<img src="../images/logo.png" alt="Logo" style="height:65px;">
+</div>
+
+<nav>
+<ul style="list-style:none; display:flex; gap:20px; margin:0; padding:0;">
+<li><a href="../index.html" style="color:white;text-decoration:none;font-weight:bold;">Home</a></li>
+<li><a href="../index.html#about" style="color:white;text-decoration:none;font-weight:bold;">About Us</a></li>
+<li><a href="../index.html#services" style="color:white;text-decoration:none;font-weight:bold;">Our Services</a></li>
+<li><a href="training.html" style="color:white;text-decoration:none;font-weight:bold;">Our Training</a></li>
+<li><a href="pricing.html" style="color:white;text-decoration:none;font-weight:bold;">Our Pricing</a></li>
+<li><a href="../index.html#contact" style="color:white;text-decoration:none;font-weight:bold;">Contact Us</a></li>
+</ul>
+</nav>
+
+</header>
 <!-- HEADER -->
 <div class="header">
     <h1>Web Development</h1>
