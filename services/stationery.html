@@ -141,9 +141,11 @@ Whether for daily office operations, training programs, or academic use, we ensu
 </div>
   </div>
 <div class="footer-bottom">
-© 2026 Virunga Digital Solutions — All Rights Reserved
+© <span id="year"></span> Virunga Digital Solutions Ltd — All Rights Reserved
 </div>
-
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </footer>
 </body>
 </html>
