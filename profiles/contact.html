@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Form</title>
+
+<style>
+
+/* CONTACT SECTION */
+.contact{
+    padding:80px 10%;
+    background:#f4f7fb;
+    text-align:center;
+}
+
+.contact h2{
+    color:orange;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.contact-desc{
+    max-width:700px;
+    margin:auto;
+    color:#555;
+    margin-bottom:40px;
+    line-height:1.8;
+}
+
+/* FORM CONTAINER */
+.contact-form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* INPUT FIELDS */
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+
+/* FOCUS EFFECT */
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:orange;
+    box-shadow:0 0 5px rgba(255,165,0,0.4);
+}
+
+/* TEXTAREA */
+.contact-form textarea{
+    height:150px;
+    resize:none;
+}
+
+/* BUTTON */
+.contact-form button{
+    background:#0a3d62;
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    background:orange;
+    transform:translateY(-3px);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p class="contact-desc">
+        Have questions, need support, or want to work with us?  
+        Send us a message and we will respond quickly.
+    </p>
+
+    <form action="contact.php" method="POST" class="contact-form">
+
+        <input type="text" name="name" placeholder="Your Full Name" required>
+
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <input type="text" name="subject" placeholder="Subject" required>
+
+        <textarea name="message" placeholder="Write Your Message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+</body>
+</html>
