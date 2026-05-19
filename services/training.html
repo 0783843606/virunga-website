@@ -4,6 +4,7 @@
 <title>Training Services</title>
 
 <style>
+
 /* FIXED HEADER */
 header{
     position:fixed;
@@ -12,14 +13,18 @@ header{
     width:100%;
     z-index:1000;
 }
-/* PUSH CONTENT DOWN */
+
+/* BODY FIX (IMPORTANT FOR CUT OFF ISSUE) */
 body{
     margin:0;
     font-family:Arial;
     background:#f4f7fb;
-    padding-top:100px; /* IMPORTANT */
+
+    /* FIX: increase spacing for fixed header */
+    padding-top:120px;
 }
-/* PAGE HEADER */
+
+/* PAGE HEADER (UNCHANGED) */
 .header{
     background:#0a3d62;
     color:white;
@@ -34,7 +39,7 @@ body{
     background:white;
     padding:40px;
     border-radius:12px;
-   margin-top:20px;
+    margin-top:20px;
     position:relative;
     z-index:1;
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
@@ -59,11 +64,15 @@ h2{
     background:#ff8800;
 }
 
-/* TABLE STYLING */
+/* TABLE FIX (PREVENT CUT OFF ON SMALL SCREENS) */
 table{
     width:100%;
     border-collapse:collapse;
     margin-top:20px;
+
+    /* FIX */
+    display:block;
+    overflow-x:auto;
 }
 
 table th, table td{
@@ -114,25 +123,25 @@ footer{
     border-top:1px solid rgba(255,255,255,0.2);
     padding-top:15px;
 }
+
 .footer-col p {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #ffffff; /* text color */
+    color: #ffffff;
 }
 
 .footer-col i {
-    color: orange; /* orange like your image */
+    color: orange;
     font-size: 18px;
 }
-
 
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- HEADER (UNCHANGED) -->
 <header style="display:flex;justify-content:space-between;align-items:center;padding:25px 40px;background:#0a3d62;color:white;">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -153,13 +162,13 @@ footer{
 
 </header>
 
-<!-- PAGE HEADER -->
+<!-- PAGE HEADER (UNCHANGED) -->
 <div class="header">
 <h1 style="color:orange;">Training & Capacity Building</h1>
 <p>Virunga Digital Solutions – Empowering individuals and organizations with digital skills for innovation, career growth, and technological advancement.</p>
 </div>
 
-<!-- CONTENT -->
+<!-- CONTENT (UNCHANGED) -->
 <div class="container">
 
 <h2>Overview</h2>
@@ -255,29 +264,30 @@ Hands-on ICT projects, collaborative teamwork, Agile development practices, prob
 </tr>
 
 </table>
+
 <h2>These programs prepare learners for:</h2>
 <ul>
-    <li>System Administrator careers</li>
-    <li>Cloud Engineer careers</li>
-    <li>Software & Web Developer Careers</li>
-    <li>Network Engineer careers</li>
-    <li>IT Support roles</li>
-    <li>Freelancing opportunities</li>
+<li>System Administrator careers</li>
+<li>Cloud Engineer careers</li>
+<li>Software & Web Developer Careers</li>
+<li>Network Engineer careers</li>
+<li>IT Support roles</li>
+<li>Freelancing opportunities</li>
 </ul>
+
 <h2>Eligibility:</h2>
 
 <ul>
-    <li>Open to students, graduates, and professionals interested in ICT skills development.</li>
-    <li>Basic computer knowledge is required for most programs (except Digital Literacy Training and Career Development & Mentorship Programs) designed for all.</li>
+<li>Open to students, graduates, and professionals interested in ICT skills development.</li>
+<li>Basic computer knowledge is required for most programs (except Digital Literacy Training and Career Development & Mentorship Programs) designed for all.</li>
 </ul>
 
 <a class="btn" href="../index.html#services">← Back</a>
 
 </div>
 
-<!-- FOOTER -->
+<!-- FOOTER (UNCHANGED) -->
 <footer>
-
 <div class="footer-container">
 
 <div class="footer-col">
@@ -302,21 +312,22 @@ Hands-on ICT projects, collaborative teamwork, Agile development practices, prob
 </div>
 
 <div class="footer-col">
-    <h3>Contact</h3>
-    <p><i class="fa-solid fa-location-dot"></i> Kigali, Rwanda</p>
-
-    <p><i class="fa-regular fa-envelope"></i> info@virungadigital.com</p>
-
-    <p><i class="fa-solid fa-phone"></i> +250 7XX XXX XXX</p>
+<h3>Contact</h3>
+<p><i class="fa-solid fa-location-dot"></i> Kigali, Rwanda</p>
+<p><i class="fa-regular fa-envelope"></i> info@virungadigital.com</p>
+<p><i class="fa-solid fa-phone"></i> +250 7XX XXX XXX</p>
 </div>
-  </div>
+
+</div>
 
 <div class="footer-bottom">
 © <span id="year"></span> Virunga Digital Solutions Ltd — All Rights Reserved
 </div>
+
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </footer>
 
 </body>
