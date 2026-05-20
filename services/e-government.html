@@ -3,13 +3,33 @@
 <head>
 <title>E-Government Services</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
+
+/* FIXED HEADER */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    background:#0a3d62;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 40px;
+}
+
+/* BODY FIX */
 body{
     margin:0;
     font-family:Arial;
     background:#f4f7fb;
+    padding-top:120px;
 }
 
+/* PAGE HEADER */
 .header{
     background:#0a3d62;
     color:white;
@@ -17,29 +37,31 @@ body{
     padding:60px;
 }
 
+/* CONTENT */
 .container{
     max-width:900px;
     margin:auto;
     background:white;
     padding:40px;
     border-radius:12px;
-    margin-top:-30px;
+    margin-top:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
 h2{
     color:#0a3d62;
 }
 
-/* ✅ spacing between sentences (paragraphs) */
 .container p{
     margin-bottom:15px;
     line-height:1.8;
 }
 
+/* BUTTON */
 .btn{
     display:block;
     width:fit-content;
-    margin:20px auto; /* centers the button */
+    margin:20px auto;
     padding:10px 20px;
     background:orange;
     color:white;
@@ -47,7 +69,26 @@ h2{
     border-radius:8px;
 }
 
-/* FOOTER */
+.btn:hover{
+    background:#ff8800;
+}
+
+/* NAV */
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+    margin:0;
+    padding:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* FOOTER (UNCHANGED) */
 footer{
     background:#0a3d62;
     color:white;
@@ -96,16 +137,36 @@ footer{
 .footer-col li{
     margin-bottom:10px;
 }
+
 </style>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
 
+<!-- ✅ HEADER (FROM TRAINING PAGE) -->
+<header>
+
+<div style="display:flex;align-items:center;gap:12px;">
+<img src="../images/logo.png" alt="Logo" style="height:65px;">
+</div>
+
+<nav>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#about">About Us</a></li>
+<li><a href="../index.html#services">Our Services</a></li>
+<li><a href="portals.html">Online Services</a></li>
+<li><a href="training.html">Our Training</a></li>
+<li><a href="pricing.html">Our Pricing</a></li>
+<li><a href="../index.html#contact">Contact Us</a></li>
+</ul>
+</nav>
+
+</header>
+
+<!-- PAGE HEADER -->
 <div class="header">
-    <h1>E-Government & Online Services</h1>
+    <h1 style="color:orange;">E-Government & Online Services</h1>
     <p>Secure Digital Public Services</p>
 </div>
 
@@ -113,15 +174,15 @@ footer{
 
 <h2>Overview</h2>
 
-<!-- ✅ FIXED SPACING -->
-<p>At Virunga Digital Solutions, we provide professional support and guidance for accessing various E-Government and online services.
+<p>
+At Virunga Digital Solutions, we provide professional support and guidance for accessing various E-Government and online services.
+We assist individuals, students, businesses, and organizations in completing online applications, registrations, document processing, and digital service requests efficiently and accurately.
+</p>
 
-We assist individuals, students, businesses, and organizations in completing online applications, registrations, document processing, and digital service requests efficiently and accurately.</p>
-
-<p>Our services are designed to simplify access to digital platforms, save time, and ensure smooth processing of online services.
-    We are committed to helping clients easily navigate digital platforms while promoting efficiency, accessibility, and digital transformation.</p>
-
-
+<p>
+Our services are designed to simplify access to digital platforms, save time, and ensure smooth processing of online services.
+We are committed to helping clients easily navigate digital platforms while promoting efficiency, accessibility, and digital transformation.
+</p>
 
 <h2>We Provide Support On:</h2>
 
@@ -131,9 +192,9 @@ We assist individuals, students, businesses, and organizations in completing onl
 <li>Rwanda Development Board (RDB) online services</li><br>
 <li>University and scholarship applications</li><br>
 <li>Job application and recruitment portals</li><br>
-<li>Passport and national document applications</li> <br>
-<li>Email account creation and setup</li> <br>
-<li>Online business registration</li> <br>
+<li>Passport and national document applications</li><br>
+<li>Email account creation and setup</li><br>
+<li>Online business registration</li><br>
 <li>Digital payment and e-service support</li><br>
 <li>CV writing and professional document preparation</li><br>
 <li>Online appointments and service bookings</li><br>
@@ -145,7 +206,7 @@ We assist individuals, students, businesses, and organizations in completing onl
 
 </div>
 
-<!-- FOOTER -->
+<!-- ✅ FOOTER (EXACTLY UNCHANGED) -->
 <footer>
 
 <div class="footer-container">
