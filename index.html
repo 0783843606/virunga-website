@@ -1054,6 +1054,11 @@ body{
     background-position:center;
     margin-top:0;
 }
+.active {
+    color: orange !important;
+}
+
+
 
 
 </style>
@@ -1061,6 +1066,7 @@ body{
 
 <body>
 
+<!-- ✅ HEADER (UNCHANGED BUT CLEAN) -->
 <header style="
     display:flex;
     justify-content:space-between;
@@ -1070,28 +1076,24 @@ body{
     color:white;
 ">
 
-    <!-- LEFT: LOGO + NAME -->
 <div style="display:flex;align-items:center;gap:12px;">
-
-    <!-- LOGO IMAGE -->
-   <img src="images/logo.png" alt="Logo" style="height:65px; width: 300px;">
+<img src="images/logo.png" alt="Logo" style="height:65px; width:300px;">
 </div>
 
-    <!-- NAVIGATION -->
-    <nav>
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Our Services</a></li>
-         <li><a href="services/portals.html">Online Services</a></li>
-       <li><a href="services/training.html">Our Training</a></li>
-      <li><a href="services/pricing.html">Our Pricing</a></li>
-        <li><a href="profiles/contact.html">Contact Us</a></li>
-    
-    </ul>
+<nav>
+<ul class="nav-links">
+<li><a href="#home" class="active">Home</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#services">Our Services</a></li>
+<li><a href="#online-services">Online Services</a></li>
+<li><a href="#training">Our Training</a></li>
+<li><a href="#pricing">Our Pricing</a></li>
+<li><a href="#contact">Contact Us</a></li>
+</ul>
 </nav>
 
 </header>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <!-- MOVING TEXT SECTION -->
@@ -1580,6 +1582,20 @@ function prevServices(){
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+<script>
+const links = document.querySelectorAll(".nav-links a");
 
+// add click event to each link
+links.forEach(link => {
+    link.addEventListener("click", function () {
+
+        // remove active from all
+        links.forEach(nav => nav.classList.remove("active"));
+
+        // add active to clicked one
+        this.classList.add("active");
+    });
+});
+</script>
 </body>
 </html>
