@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard - Pricing</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin: 0;
+    background:#f4f7fb;
+}
+
+header{
+    background:#0a3d62;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    margin-top:20px;
+}
+
+th, td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:left;
+}
+
+th{
+    background:#0a3d62;
+    color:white;
+}
+
+input{
+    width:100%;
+    padding:6px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:10px 15px;
+    background:orange;
+    color:white;
+    border:none;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#ff8800;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2>Pricing Admin Dashboard</h2>
+</header>
+
+<div class="container">
+
+<h3>Update Service Prices</h3>
+
+<table id="pricingTable">
+<thead>
+<tr>
+<th>Service</th>
+<th>Price (Rwf)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Black & White Printing (A4)</td>
+<td><input value="100"></td>
+</tr>
+
+<tr>
+<td>Color Printing (A4)</td>
+<td><input value="200"></td>
+</tr>
+
+<tr>
+<td>Photocopying (A4)</td>
+<td><input value="100"></td>
+</tr>
+
+<tr>
+<td>Scanning Documents</td>
+<td><input value="200"></td>
+</tr>
+
+<tr>
+<td>Binding</td>
+<td><input value="1000"></td>
+</tr>
+
+<tr>
+<td>Exercise Books 200 Pages</td>
+<td><input value="600"></td>
+</tr>
+
+<tr>
+<td>Logo Design</td>
+<td><input value="100000"></td>
+</tr>
+
+<tr>
+<td>CV Writing</td>
+<td><input value="2000"></td>
+</tr>
+
+<tr>
+<td>Operating System Installation</td>
+<td><input value="15000"></td>
+</tr>
+
+</tbody>
+</table>
+
+<button onclick="savePrices()">Save Changes</button>
+
+</div>
+
+<script>
+// SAVE DATA
+function savePrices(){
+    let rows = document.querySelectorAll("#pricingTable tbody tr");
+    let data = [];
+
+    rows.forEach(row => {
+        let service = row.cells[0].innerText;
+        let price = row.cells[1].querySelector("input").value;
+
+        data.push({service, price});
+    });
+
+    localStorage.setItem("pricingData", JSON.stringify(data));
+
+    alert("Prices updated successfully!");
+}
+
+// LOAD DATA
+function loadPrices(){
+    let data = JSON.parse(localStorage.getItem("pricingData"));
+
+    if(data){
+        let rows = document.querySelectorAll("#pricingTable tbody tr");
+
+        data.forEach((item, index) => {
+            if(rows[index]){
+                rows[index].cells[1].querySelector("input").value = item.price;
+            }
+        });
+    }
+}
+
+loadPrices();
+</script>
+
+</body>
+</html>
