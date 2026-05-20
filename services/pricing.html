@@ -531,6 +531,26 @@ footer{
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+<script>
+function loadPricing(){
+    let data = JSON.parse(localStorage.getItem("pricingData"));
+
+    if(!data) return;
+
+    let rows = document.querySelectorAll("table tbody tr");
+
+    data.forEach((item, index) => {
+        if(rows[index]){
+            let priceCell = rows[index].querySelectorAll("td")[3]; 
+            if(priceCell){
+                priceCell.innerText = item.price;
+            }
+        }
+    });
+}
+
+window.onload = loadPricing;
+</script>
 </footer>
 
 </body>
