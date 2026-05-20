@@ -10,7 +10,7 @@ header{
     position:fixed;
     top:0;
     left:0;
-    right:0;           /* IMPORTANT FIX */
+    right:0;
     z-index:1000;
     background:#0a3d62;
 
@@ -18,22 +18,20 @@ header{
     justify-content:space-between;
     align-items:center;
 
-    padding:20px 20px;  /* reduced padding FIX */
-    box-sizing:border-box; /* IMPORTANT */
-    overflow:hidden;     /* prevents cut */
+    padding:20px 20px;
+    box-sizing:border-box;
+    overflow:hidden;
 }
 
-/* BODY FIX (IMPORTANT FOR CUT OFF ISSUE) */
+/* BODY FIX */
 body{
     margin:0;
     font-family:Arial;
     background:#f4f7fb;
-
-    /* FIX: increase spacing for fixed header */
     padding-top:120px;
 }
 
-/* PAGE HEADER (UNCHANGED) */
+/* PAGE HEADER */
 .header{
     background:#0a3d62;
     color:white;
@@ -62,7 +60,7 @@ h2{
 .btn{
     display:block;
     width:fit-content;
-    margin:30px auto 0 auto; /* centers it */
+    margin:30px auto 0 auto;
     padding:10px 20px;
     background:orange;
     color:white;
@@ -75,13 +73,11 @@ h2{
     background:#ff8800;
 }
 
-/* TABLE FIX (PREVENT CUT OFF ON SMALL SCREENS) */
+/* TABLE */
 table{
     width:100%;
     border-collapse:collapse;
     margin-top:20px;
-
-    /* FIX */
     display:block;
     overflow-x:auto;
 }
@@ -146,6 +142,11 @@ footer{
     color: orange;
     font-size: 18px;
 }
+.footer-col li {
+    margin-bottom: 10px; /* space between items */
+}
+
+
 
 </style>
 </head>
@@ -173,13 +174,13 @@ footer{
 
 </header>
 
-<!-- PAGE HEADER (UNCHANGED) -->
+<!-- PAGE HEADER (UNCHANGED CONTENT) -->
 <div class="header">
 <h1 style="color:orange;">Training & Capacity Building</h1>
 <p>Virunga Digital Solutions – Empowering individuals and organizations with digital skills for innovation, career growth, and technological advancement.</p>
 </div>
 
-<!-- CONTENT (UNCHANGED) -->
+<!-- CONTENT (FULL RESTORED - YOUR ORIGINAL CONTENT KEPT) -->
 <div class="container">
 
 <h2>Overview</h2>
@@ -232,23 +233,24 @@ It covers key areas such as computer fundamentals, file and system management, M
 <td>1 Month</td>
 <td>70,000</td>
 </tr>
+
 <tr>
 <td>Cybersecurity Awareness Training</td>
-<td>Our Cybersecurity Awareness Training is designed to equip employees, students, and organizations with the knowledge needed to recognize, prevent, and respond to cyber threats. 
-    The training focuses on building a strong security culture by reducing human-related security risks such as phishing, password misuse, social engineering, and unsafe internet practices.</td>
+<td>Our Cybersecurity Awareness Training is designed to equip employees, students, and organizations with the knowledge needed to recognize, prevent, and respond to cyber threats. The training focuses on building a strong security culture by reducing human-related security risks such as phishing, password misuse, social engineering, and unsafe internet practices.</td>
 <td>1 Month</td>
 <td>50,000</td>
 </tr>
+
 <tr>
 <td>Linux Administration & Network and System Administration</td>
 <td>
 Our Linux Administration & Network and System Administration services focus on managing and optimizing IT infrastructure to ensure secure, stable, and high-performing systems.
 We handle the installation, configuration, monitoring, and maintenance of Linux servers and network environments to support business, cloud, and enterprise operations while minimizing downtime.
 
-The services include Linux server setup and management, user and system administration, package updates, automation through scripting, performance monitoring, web and database server configuration, backup and recovery, and security hardening. 
+The services include Linux server setup and management, user and system administration, package updates, automation through scripting, performance monitoring, web and database server configuration, backup and recovery, and security hardening.
 On the networking side, we provide LAN/WAN setup, router and switch configuration, IP addressing, network monitoring and troubleshooting, VPN setup, firewall management, and overall network performance optimization.
 </td>
-<td>2Months</td>
+<td>2 Months</td>
 <td>150,000</td>
 </tr>
 
@@ -261,32 +263,21 @@ On the networking side, we provide LAN/WAN setup, router and switch configuratio
 
 <tr>
 <td>Career Development & Mentorship Programs</td>
-<td>
-Our Career Development & Mentorship Programs provide personalized guidance and coaching to help individuals build successful careers in IT and professional fields. 
-The program helps participants identify their strengths, set clear career goals, and develop the skills needed for long-term growth.
-Professional development including CV writing, Interview Preparation & Coaching, Job Matching & Career Guidance,communication skills, LinkedIn and portfolio building, job search strategies, along with personalized mentorship, career guidance, project reviews, coaching, networking, and personal growth.
-</td>
+<td>Our Career Development & Mentorship Programs provide personalized guidance and coaching to help individuals build successful careers in IT and professional fields. The program helps participants identify their strengths, set clear career goals, and develop the skills needed for long-term growth. Professional development including CV writing, Interview Preparation & Coaching, Job Matching & Career Guidance, communication skills, LinkedIn and portfolio building, job search strategies, along with personalized mentorship, career guidance, project reviews, coaching, networking, and personal growth.</td>
 <td>1 Month</td>
 <td>50,000</td>
 </tr>
 
 <tr>
 <td>Software & Web Development</td>
-<td>
-Comprehensive training in software and web development, including programming languages (Python, Java, C++), algorithms, version control (Git), debugging, and application development, along with frontend and backend web technologies such as HTML, CSS, JavaScript, React, databases, APIs, and deployment practices.
-</td>
-<td>3Months</td>
+<td>Comprehensive training in software and web development, including programming languages (Python, Java, C++), algorithms, version control (Git), debugging, and application development, along with frontend and backend web technologies such as HTML, CSS, JavaScript, React, databases, APIs, and deployment practices.</td>
+<td>3 Months</td>
 <td>150,000</td>
 </tr>
 
 <tr>
 <td>Internship & Projects</td>
-<td>
-Our Internship & Projects program is designed to give students and graduates hands-on experience in real-world IT and business environments. 
-We bridge the gap between academic knowledge and industry practice by involving participants in practical projects that build technical, analytical, and professional skills.
-
-The program covers structured internships, real-world software and web development projects, IT support, networking and infrastructure tasks, cloud and DevOps exposure, project-based learning, teamwork using agile methods, documentation and reporting, portfolio development, and continuous mentorship.
-</td>
+<td>Our Internship & Projects program is designed to give students and graduates hands-on experience in real-world IT and business environments. We bridge the gap between academic knowledge and industry practice by involving participants in practical projects that build technical, analytical, and professional skills. The program covers structured internships, real-world software and web development projects, IT support, networking and infrastructure tasks, cloud and DevOps exposure, project-based learning, teamwork using agile methods, documentation and reporting, portfolio development, and continuous mentorship.</td>
 <td>1 Month</td>
 <td>60,000</td>
 </tr>
@@ -304,7 +295,6 @@ The program covers structured internships, real-world software and web developme
 </ul>
 
 <h2>Eligibility:</h2>
-
 <ul>
 <li>Open to students, graduates, and professionals interested in ICT skills development.</li>
 <li>Basic computer knowledge is required for most programs (except Digital Literacy Training and Career Development & Mentorship Programs) designed for all.</li>
@@ -314,7 +304,7 @@ The program covers structured internships, real-world software and web developme
 
 </div>
 
-<!-- FOOTER (UNCHANGED) -->
+<!-- FOOTER (FIXED ONLY, CONTENT PRESERVED) -->
 <footer>
 <div class="footer-container">
 
@@ -323,7 +313,7 @@ The program covers structured internships, real-world software and web developme
 <p>Empowering Digital Transformation Through Innovation & Technology.</p>
 </div>
 
-<div class="footer-col">
+ <div class="footer-col">
 <h3>Quick Links</h3>
 
   <li><a href="https://www.rra.gov.rw/en/home" target="_blank">Rwanda Revenue Authority (RRA)</a></li>
@@ -339,7 +329,7 @@ The program covers structured internships, real-world software and web developme
   <li><a href="#">Cloud Solutions</a></li>
   <li><a href="#">Cybersecurity</a></li>
   <li><a href="#">Mobile Apps</a></li>
-</div>>
+</div>
 
 <div class="footer-col">
 <h3>Contact</h3>
