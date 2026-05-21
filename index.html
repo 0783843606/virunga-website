@@ -1058,7 +1058,58 @@ body{
     color:orange !important;
 }
 
+/* NEWS GRID (4 per row like board) */
+#news .grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:40px;
+}
 
+/* NEWS CARD */
+#news .card{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+#news .card:hover{
+    transform:translateY(-10px);
+}
+
+/* IMAGE */
+#news .card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* TEXT */
+#news .card h3{
+    color:#0a3d62;
+    margin-top:15px;
+}
+
+#news .card p{
+    font-size:14px;
+    color:#555;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    #news .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    #news .grid{
+        grid-template-columns:1fr;
+    }
+}
 
 
 </style>
@@ -1409,7 +1460,52 @@ cd
     </div>
 
 </section>
+<!-- NEWS & UPDATES -->
+<section id="news">
 
+<h2 style="color:orange;">News & Updates</h2>
+
+<p style="max-width:900px;margin:auto;margin-bottom:40px;">
+Stay updated with the latest announcements, technology updates, training programs, and digital transformation news from Virunga Digital Solutions.
+</p>
+
+<div class="grid">
+
+    <!-- NEWS 1 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
+        <h3>New Digital Services Launched</h3>
+        <p>We have introduced new e-government and online services to improve accessibility.</p>
+        <button class="btn">Read More</button>
+    </div>
+
+    <!-- NEWS 2 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
+        <h3>Cybersecurity Training</h3>
+        <p>We successfully trained institutions on modern cybersecurity practices.</p>
+        <button class="btn">Read More</button>
+    </div>
+
+    <!-- NEWS 3 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+        <h3>Cloud Infrastructure Upgrade</h3>
+        <p>Our systems have been upgraded for better speed, reliability and security.</p>
+        <button class="btn">Read More</button>
+    </div>
+
+    <!-- NEWS 4 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a5">
+        <h3>Startup Innovation Support</h3>
+        <p>We continue supporting young innovators through training and mentorship.</p>
+        <button class="btn">Read More</button>
+    </div>
+
+</div>
+
+</section>
 <!-- SPACE BETWEEN SECTIONS -->
 <div class="section-space"></div>
 
