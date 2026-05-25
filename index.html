@@ -1158,8 +1158,6 @@ body{
 </div>
 <!-- HERO -->
 <section class="hero" id="home">
-
-    <div class="hero-slider">
 <!-- SLIDER CONTAINER -->
 <div class="hero-slider">
 
@@ -1674,5 +1672,22 @@ document.body.innerHTML = document.body.innerHTML.replaceAll(
     "Virunga Digital Solutions Ltd"
 );
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let slides = document.querySelectorAll(".slide");
+    let current = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+    }
+
+    setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    }, 4000);
+});
+</script>
+
 </body>
 </html>
