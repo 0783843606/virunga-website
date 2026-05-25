@@ -1468,7 +1468,7 @@ Stay updated with the latest announcements, technology updates, training program
 
 <div class="grid">
 
-    <!-- NEWS 1 -->
+   <!-- NEWS 1 -->
     <div class="card">
         <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
         <h3>New Digital Services Launched</h3>
@@ -1500,7 +1500,30 @@ Stay updated with the latest announcements, technology updates, training program
         <button class="btn">Read More</button>
     </div>
 
+
+    <!-- NEWS 5 (HIDDEN) -->
+    <div class="card extra-news" style="display:none;">
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
+        <h3>Digital Innovation Hub</h3>
+        <p>We are expanding innovation programs for youth and startups.</p>
+        <button class="btn">Read More</button>
+    </div>
+
+    <!-- NEWS 6 (HIDDEN) -->
+    <div class="card extra-news" style="display:none;">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
+        <h3>AI Training Program</h3>
+        <p>New AI and Machine Learning training sessions launched.</p>
+        <button class="btn">Read More</button>
+    </div>
+
 </div>
+
+<!-- ADD THIS BUTTON -->
+<br>
+<button id="exploreBtn" class="btn" onclick="toggleNews()">
+    Explore More
+</button>
 
 </section>
 <!-- SPACE BETWEEN SECTIONS -->
@@ -1688,6 +1711,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 4000);
 });
 </script>
+<script>
+let newsExpanded = false;
 
+function toggleNews(){
+    let extraNews = document.querySelectorAll(".extra-news");
+    let btn = document.getElementById("exploreBtn");
+
+    if(!newsExpanded){
+        extraNews.forEach(n => n.style.display = "block");
+        btn.innerText = "Show Less";
+        newsExpanded = true;
+    } else {
+        extraNews.forEach(n => n.style.display = "none");
+        btn.innerText = "Explore More";
+        newsExpanded = false;
+    }
+}
+</script>
 </body>
 </html>
